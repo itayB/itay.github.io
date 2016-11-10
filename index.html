@@ -1,1 +1,204 @@
-hello all!
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="google-site-verification" content="Fjdt_3wIwJaOd5X_qSxKxYq5QVove4LFYb9fKqsXGdw" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This site summarizes some of my professional work; Academic work, volunteering, side projects and more.">
+    <meta name="author" content="Itay Bittan">
+    <link rel="shortcut icon" href='static/images/favicon.ico'>
+    <title>Itay Bittan's Website</title>
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="static/navbar.css" rel="stylesheet">
+    <link href="static/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="static/main.css" rel="stylesheet">
+    <script src="static/modernizr.js"></script>
+</head>
+<body>
+<div class="container">
+    <!-- Static navbar -->
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Itay's website</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Professional Experience <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">
+                                Technologies
+                            </li>
+                            <li>
+                                <a href="/summary/google-protocol-buffers">Google Protocol Buffers</a>
+                            </li>
+                            <li>
+                                <a href="/summary/apache-kafka">Apache Kafka</a>
+                            </li>
+                            <li>
+                                <a href="/summary/nodejs">Node.js <span class="text-primary" style="font-size: 10px;">new!</span></a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">
+                                Upcoming
+                            </li>
+                            <li>
+                                <a href="">Docker</a>
+                            </li>
+                            <li>
+                                <a href="">Kubernetes</a>
+                            </li>
+                            <li>
+                                <a href="">Jenkins</a>
+                            </li>
+                            <li>
+                                <a href="">Google tests</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">
+                                Miscellaneous
+                            </li>
+                            <li>
+                                <a href="/summary/interviews">Job Interviews <span class="text-primary" style="font-size: 10px;">new!</span></a>
+                            </li>
+                            <li>
+                                <a href="/summary/tracker">Tracker</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academic Work <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">
+                                4th Year - Final Project
+                            </li>
+                            <li>
+                                <a href="{% url 'project' 'gps' %}">{% trans "GPS Signals Simulation In Urban Canyons" %}</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">
+                                {% trans "3rd Year Projects" %}
+                            </li>
+                            <li>
+                                <a href="{% url 'project' 'memory' %}">{% trans "Memory Management Simulation" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'project' 'forum' %}">{% trans "WEB Forum" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'project' 'compiler' %}">{% trans "Compiler Construction" %}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Volunteering" %} <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header" style="width:230px;">
+                                {% trans "The Public Knowledge Workshop" %}
+                            </li>
+                            <li>
+                                <a href="{% url 'project' 'placemarkr' %}">{% trans "Placemarkr" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'project' 'knesset' %}">{% trans "Open Knesset Mobile" %}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Side Projects" %} <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'project' 'finance' %}">{% trans "Finance+" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'project' 'expenses' %}">{% trans "Expenses Calculator" %}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" style="display: none;">{% trans "Activity Log" %}</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" id="language" data-value="{{ LANGUAGE_CODE }}" style="display: none;">{% trans "עברית" %}</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" href="#contactModal">{% trans "Contact" %}</a>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </div>
+    <div class="alert alert-warning">
+        <button id="close-alert" type="button" class="close" aria-hidden="true">&times;</button>
+        <div id="alert-message"></div>
+    </div>
+
+    {% block content %}
+    :)
+    {% endblock %}
+
+</div>
+<!-- /container -->
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">© 2016 {% trans "Itay Bittan's Website" %}. {% trans "This site developed using" %} <a href="https://www.djangoproject.com/" target="_blank">django</a>, <a href="http://jquery.com/" target="_blank">jQuery</a> {% trans "and" %} <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a> {% trans "and hosted by" %} <a href="https://www.heroku.com/" target="_blank">Heroku</a>.</p>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">{% trans "Contact" %}</h4>
+            </div>
+            <form id="id_contactForm">
+                <div class="modal-body">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="id_fullname">{% trans "Name" %}</label>
+                        <input type="text" class="form-control" id="id_fullname" name="fullname" placeholder="{% trans "Enter your full name" %}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_email">{% trans "Email" %}</label>
+                        <input type="email" class="form-control" id="id_email" name="email" placeholder="{% trans "Enter your email" %}">
+                    </div>
+
+                    <div>
+                        <textarea id="id_content" class="form-control" rows="5" name="content" placeholder="{% trans "Write your comment here" %}"></textarea>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="id_sendContact" class="btn btn-primary">
+                        {% trans "Send" %}
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        {% trans "Cancel" %}
+                    </button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="{% static 'jquery-1.11.0.min.js' %}"></script>
+<script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
+<script src="{% url 'mainjs' %}"></script>
+</body>
+</html>
