@@ -1,0 +1,20 @@
+.welcome {
+	font-weight: bold;	
+}
+
+.profileButton {
+	margin-bottom: 6px;
+}
+
+.alert {
+	display: none;
+}
+
+.img-thumbnail {
+	margin: 5px;
+	cursor: pointer;
+}
+
+.label-info {
+	cursor: pointer;
+}
