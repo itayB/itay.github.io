@@ -133,7 +133,7 @@
                         <a href="#" id="language" data-value="{{ LANGUAGE_CODE }}" style="display: none;">{% trans "עברית" %}</a>
                     </li>
                     <li>
-                        <a data-toggle="modal" href="#contactModal">{% trans "Contact" %}</a>
+                        <a data-toggle="modal" href="#contactModal">Contact</a>
                     </li>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -144,16 +144,16 @@
         <div id="alert-message"></div>
     </div>
 
-    {% block content %}
-    :)
-    {% endblock %}
+    <div id="main">
+
+    </div>
 
 </div>
 <!-- /container -->
 
 <div id="footer">
     <div class="container">
-        <p class="text-muted">© 2016 {% trans "Itay Bittan's Website" %}. {% trans "This site developed using" %} <a href="https://www.djangoproject.com/" target="_blank">django</a>, <a href="http://jquery.com/" target="_blank">jQuery</a> {% trans "and" %} <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a> {% trans "and hosted by" %} <a href="https://www.heroku.com/" target="_blank">Heroku</a>.</p>
+        <p class="text-muted">© 2016 Itay Bittan's Website. This site developed using <a href="https://www.djangoproject.com/" target="_blank">django</a>, <a href="http://jquery.com/" target="_blank">jQuery</a> {% trans "and" %} <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a> {% trans "and hosted by" %} <a href="https://www.heroku.com/" target="_blank">Heroku</a>.</p>
     </div>
 </div>
 
@@ -198,7 +198,6 @@
 
 <script src="static/jquery-1.11.0.min.js"></script>
 <script src="static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="django.views.i18n.javascript_catalog"></script>
 <script src="main.js"></script>
 </body>
 </html>

@@ -1,6 +1,3 @@
-
-{% load staticfiles %}
-
 $(function() {
 	$("#id_contactForm").submit(function(event) {
 		//disable the default form submission
